@@ -1,13 +1,14 @@
 from django.urls import path
+from rest_framework.routers import DefaultRouter
+from rest_framework.urlpatterns import format_suffix_patterns
 
 from . import views
 
-
-urlpatterns = [
-    path('movies/', views.MovieListView.as_view(), name='movie-list'),
-    path('movies/<int:pk>/', views.MovieDetailView.as_view(), name='movie-detail'),
-    path('reviews/', views.ReviewCreateView.as_view(), name='review-create'),
-    path('rating/', views.AddStarRatingView.as_view(), name='rating-create'),
-    path('actors/', views.ActorsListView.as_view(), name='actor-list'),
-    path('actors/<int:pk>/', views.ActorsDetailView.as_view(), name='actor-detail'),
-]
+urlpatterns = format_suffix_patterns([
+    path("movie/", views.MovieViewSet.as_view({'get': 'list'})),
+    path("movie/<int:pk>/", views.MovieViewSet.as_view({'get': 'retrieve'})),
+    path("review/", views.ReviewCreateViewSet.as_view({'post': 'create'})),
+    path("rating/", views.AddStarRatingViewSet.as_view({'post': 'create'})),
+    path('actor/', views.ActorsViewSet.as_view({'get': 'list'})),
+    path('actor/<int:pk>/', views.ActorsViewSet.as_view({'get': 'retrieve'})),
+])

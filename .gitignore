@@ -8,11 +8,13 @@ idea
 
 dist
 db.sqlite3
+.env
 
 venv
 
 
 prod_settings.py
+.env
 local_settings.py
 
 __pycache__/
