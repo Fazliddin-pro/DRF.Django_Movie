@@ -9,6 +9,12 @@ djangorestframework = "*"
 pillow = "*"
 psycopg2-binary = "*"
 django-ckeditor = "*"
+django-filter = "*"
+djoser = "*"
+djangorestframework-simplejwt = "*"
+drf-yasg = "*"
+django-rest-framework-social-oauth2 = "*"
+django-cors-headers = "*"
 
 [dev-packages]
 
