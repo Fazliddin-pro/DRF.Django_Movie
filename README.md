@@ -8,7 +8,7 @@ Django Movies API is a backend application built with Django and Django REST Fra
 
 - **Movies Management**: CRUD operations for movies and reviews.
 - **Authentication**:
-  - OAuth2 authentication with Google.
+  - OAuth2 authentication with Google Cloud.
   - JWT-based authentication.
   - Token-based authentication.
 - **Pagination**: Limit-offset pagination for API responses.
